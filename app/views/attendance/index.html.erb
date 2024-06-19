@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACLC LIBRARY ATTENDANCE SYSTEM</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body, html {
+      height: 100%;
+    }
+    .full-height {
+      height: 100%;
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <div class="container full-height d-flex justify-content-center align-items-center">
+    <div class="container text-center">
+      <h1 class="mb-4">ACLC LIBRARY ATTENDANCE SYSTEM</h1>
+      <form action="/attendances/time_in_out" method="post">
+        <%= csrf_meta_tags %>
+        
+        <div class="form-group">
+          <label for="usn">USN:</label>
+          <input type="text" id="usn" name="usn" maxlength="11" required  class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="reason">Purpose:</label>
+          <input type="text" id="reason" name="reason" class="form-control">
+        </div>
+
+        <div class="button-container">
+          <button type="submit" name="selected" value="time_in" class="btn btn-primary mr-2">Time In</button>
+          <button type="submit" name="selected" value="time_out" class="btn btn-primary">Time Out</button>
+        </div>
+
+        <div class="flash-container mt-3">
+          <% flash.each do |key, value| %>
+            <div class="flash <%= key %>">
+              <%= value %>
+            </div>
+          <% end %>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

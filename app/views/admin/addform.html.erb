@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <div class="card p-4 shadow">
+        <h2 class="text-center mb-4">Add Student</h2>
+        <form action="/admin/addstudent" method="post">
+          <div class="form-group">
+            <label for="usn">Student USN</label>
+            <input type="text" maxlength="11" name="usn" id="usn" class="form-control" placeholder="Enter USN" required>
+          </div>
+          <div class="form-group">
+            <label for="name">First Name</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Enter First Name" required>
+          </div>
+          <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Enter Last Name" required>
+          </div>
+          <div class="form-group">
+          <label for="course">Course</label>
+          <select name="course" id="course" class="form-control" required>
+            <option value="">Select Course</option>
+            <option value="Information Technology">Information Technology</option>
+            <option value="Computer science">Computer Science</option>
+            <option value="Business">Business</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="year">Year</label>
+          <select name="year" id="year" class="form-control" required>
+            <option value="">Select Year</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <div class="form-group">
+            <label for="birth_day">Birth Date</label>
+            <input type="date" name="bday" id="birth_day" class="form-control" required>
+        </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-block mt-3">Add Student</button>
+          </div>
+        </form>
+        <div class="flash-messages mt-3">
+          <% flash.each do |key, value| %>
+            <div class="flash alert <%= key == "notice" ? "alert-success" : "alert-danger" %> mt-2">
+              <%= value %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

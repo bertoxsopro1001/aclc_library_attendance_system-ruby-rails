@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Attendance</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <%= stylesheet_link_tag "", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <style>
+      .flash {
+        padding: 10px;
+        margin-bottom: 15px;
+      }
+      
+      .flash.notice {
+        background-color: #dff0d8;
+        color: #3c763d;
+      }
+      
+      .flash.alert {
+        background-color: #f2dede;
+        color: #a94442;
+      }
+      .attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-table th, .attendance-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  color: white; /* Set font color to white */
+}
+
+.attendance-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+      
+      
+      
+    </style>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

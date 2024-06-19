@@ -1,0 +1,170 @@
+body {
+  background-color: #121149;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+form {
+  background-color: #354f80;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  position: relative;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: calc(100% - 40px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: calc(100% - 40px);
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.flash-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.flash {
+  padding: 5px;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.flash.notice {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.flash.alert {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.form-group label {
+  display: block;
+  color: white;
+  margin-bottom: 5px; 
+}
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+.my-form {
+  width: 300px; 
+  padding: 20px; 
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  position: relative; 
+}
+
+.my-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.my-input {
+  width: calc(100% - 20px); 
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.center-btn {
+  text-align: center; 
+}
+
+.my-btn-submit {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.flash-messages {
+  position: absolute; 
+  top: calc(100% + 10px); 
+  left: 0;
+  width: 100%;
+  padding-top: 10px; 
+}
+
+.flash {
+  margin-top: 10px; 
+}
+.headt{
+  text-align: center;
+  position: relative;
+}
+.headt h1{
+  
+  position: relative;
+  top: 150px;
+  color: white;
+}
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-table th, .attendance-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.attendance-table .design th {
+  background-color: #4CAF50; 
+  color: greenyellow; 
+}
+
+.attendance-table tbody tr:nth-child(even) {
+  background-color: #81C784; 
+}
+
+.attendance-table tbody tr:nth-child(odd) {
+  background-color: #66BB6A; 
+}
+
+.attendance-table tbody td {
+  color: white; 
+}
+
+
